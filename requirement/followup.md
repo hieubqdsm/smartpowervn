@@ -1,0 +1,2 @@
+- đổi tất cả logo về logo.png trong thư mục images
+- đổi tên tất cả chỗ có tên công ty thành: Smart Power Viet Nam

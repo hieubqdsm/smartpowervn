@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - Smart Power Viet Nam</title>
+    <meta name="description" content="Dịch vụ lắp đặt hệ thống pin mặt trời chuyên nghiệp cho gia đình và doanh nghiệp. Tư vấn, thiết kế, lắp đặt và bảo trì.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Smart Power Viet Nam Logo" class="h-12 w-auto mr-3">
+                    <h1 class="text-2xl font-bold text-gray-800">Smart Power Viet Nam</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600 transition-colors">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-600 transition-colors">Giới Thiệu</a>
+                    <a href="services.html" class="text-green-600 font-semibold">Dịch Vụ</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Dự Án</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-green-600 transition-colors">Liên Hệ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600 transition-colors">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-600 transition-colors">Giới Thiệu</a>
+                    <a href="services.html" class="text-green-600 font-semibold">Dịch Vụ</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Dự Án</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-green-600 transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-20 pb-12 bg-green-600">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Dịch Vụ Của Chúng Tôi</h1>
+            <p class="text-xl text-green-100 max-w-3xl mx-auto">
+                Giải pháp toàn diện cho hệ thống năng lượng mặt trời từ tư vấn, thiết kế đến lắp đặt và bảo trì
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dịch Vụ Chính</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Smart Power Viet Nam cung cấp đầy đủ các dịch vụ liên quan đến hệ thống năng lượng mặt trời với chất lượng cao và giá cả hợp lý
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-home text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Hệ Thống Gia Đình</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Thiết kế tối ưu cho từng hộ gia đình</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Công suất từ 3kWp - 10kWp</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Tiết kiệm 60-80% chi phí điện</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Bảo hành 25 năm cho tấm pin</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="#residential" class="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                            Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-building text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Hệ Thống Doanh Nghiệp</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Giải pháp quy mô lớn cho doanh nghiệp</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Công suất từ 20kWp - 1MWp</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Giảm chi phí vận hành đáng kể</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Hỗ trợ vay vốn ngân hàng</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="#commercial" class="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                            Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Bảo Trì & Sửa Chữa</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Bảo trì định kỳ hàng năm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Sửa chữa nhanh chóng 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Thay thế linh kiện chính hãng</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Bảo hành dịch vụ 5 năm</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="#maintenance" class="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                            Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residential Systems -->
+    <section id="residential" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Hệ Thống Pin Mặt Trời Gia Đình</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Giải pháp năng lượng mặt trời tối ưu cho hộ gia đình, giúp tiết kiệm chi phí điện năng và góp phần bảo vệ môi trường.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-solar-panel text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Tấm Pin Năng Lượng</h4>
+                                <p class="text-gray-600">Công nghệ Mono PERC, hiệu suất cao 20-22%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bolt text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Inverter Chất Lượng</h4>
+                                <p class="text-gray-600">Inverter string hoặc micro-inverter tùy chọn</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-cogs text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hệ Thống Giám Sát</h4>
+                                <p class="text-gray-600">Theo dõi hiệu suất qua ứng dụng di động</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h4 class="font-semibold text-gray-800 mb-4">Thông Số Kỹ Thuật</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-600">Công suất:</span>
+                                <span class="font-semibold">3-10 kWp</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Điện năng tạo ra:</span>
+                                <span class="font-semibold">12-40 kWh/ngày</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Tiết kiệm:</span>
+                                <span class="font-semibold">60-80%</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Thời gian thu hồi vốn:</span>
+                                <span class="font-semibold">3-5 năm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="images/residential-system.jpg" alt="Hệ thống gia đình" class="rounded-lg shadow-2xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Systems -->
+    <section id="commercial" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:order-2">
+                    <img src="images/commercial-system.jpg" alt="Hệ thống doanh nghiệp" class="rounded-lg shadow-2xl max-w-full h-auto">
+                </div>
+                <div class="md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Hệ Thống Pin Mặt Trời Doanh Nghiệp</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Giải pháp năng lượng mặt trời quy mô lớn cho doanh nghiệp, nhà máy, văn phòng giúp giảm chi phí vận hành và tăng tính cạnh tranh.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-industry text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Thiết Kế Chuyên Nghiệp</h4>
+                                <p class="text-gray-600">Tối ưu hóa cho từng loại hình doanh nghiệp</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-line text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phân Tích ROI</h4>
+                                <p class="text-gray-600">Tính toán chi tiết lợi nhuận đầu tư</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-handshake text-2xl text-green-600 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hỗ Trợ Tài Chính</h4>
+                                <p class="text-gray-600">Liên kết với ngân hàng để vay vốn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-800 mb-4">Lợi Ích Doanh Nghiệp</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-600">Giảm chi phí:</span>
+                                <span class="font-semibold">70-90%</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Thu hồi vốn:</span>
+                                <span class="font-semibold">2-4 năm</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Bảo hành:</span>
+                                <span class="font-semibold">25 năm</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Tuổi thọ:</span>
+                                <span class="font-semibold">30+ năm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Services -->
+    <section id="maintenance" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dịch Vụ Bảo Trì & Sửa Chữa</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Đảm bảo hệ thống pin mặt trời hoạt động hiệu quả và bền vững với dịch vụ bảo trì chuyên nghiệp
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-clipboard-check text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Bảo Trì Định Kỳ</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Kiểm tra hiệu suất tấm pin</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Vệ sinh tấm pin định kỳ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Kiểm tra hệ thống điện</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Báo cáo chi tiết tình trạng</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-wrench text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Sửa Chữa Khẩn Cấp</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Hỗ trợ 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Đội ngũ kỹ thuật chuyên môn</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Thay thế linh kiện chính hãng</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Bảo hành dịch vụ</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-chart-bar text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Giám Sát Hiệu Suất</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Theo dõi real-time</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Phân tích dữ liệu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Cảnh báo sớm sự cố</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Báo cáo định kỳ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bảng Giá Dịch Vụ</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Giá cả minh bạch, cạnh tranh với nhiều gói dịch vụ phù hợp với mọi nhu cầu
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Gói Cơ Bản</h3>
+                        <div class="text-4xl font-bold text-green-600 mb-2">3kWp</div>
+                        <p class="text-gray-600">Phù hợp cho hộ gia đình nhỏ</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>8 tấm pin 375W</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Inverter 3kW</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Lắp đặt trọn gói</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Bảo hành 25 năm</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800 mb-4">45.000.000đ</div>
+                        <a href="contact.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Tư Vấn Ngay
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-green-600 p-8 rounded-lg border-2 border-green-600 text-white relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">Phổ Biến</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Gói Tiêu Chuẩn</h3>
+                        <div class="text-4xl font-bold mb-2">5kWp</div>
+                        <p class="text-green-100">Phù hợp cho hộ gia đình trung bình</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>14 tấm pin 375W</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Inverter 5kW</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Lắp đặt trọn gói</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Bảo hành 25 năm</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Hệ thống giám sát</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold mb-4">75.000.000đ</div>
+                        <a href="contact.html" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Tư Vấn Ngay
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Gói Cao Cấp</h3>
+                        <div class="text-4xl font-bold text-green-600 mb-2">10kWp</div>
+                        <p class="text-gray-600">Phù hợp cho hộ gia đình lớn</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>28 tấm pin 375W</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Inverter 10kW</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Lắp đặt trọn gói</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Bảo hành 25 năm</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Hệ thống giám sát</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800 mb-4">140.000.000đ</div>
+                        <a href="contact.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Tư Vấn Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-green-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Sẵn Sàng Lắp Đặt Hệ Thống Pin Mặt Trời?
+            </h2>
+            <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Liên hệ ngay với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết cho hệ thống phù hợp với nhu cầu của bạn.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Tư Vấn Miễn Phí
+                </a>
+                <a href="tel:0901234567" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                    <i class="fas fa-phone mr-2"></i>090 123 4567
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/logo.png" alt="Smart Power Viet Nam Logo" class="h-8 w-auto mr-3">
+                        <h3 class="text-xl font-bold">Smart Power Viet Nam</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Chuyên lắp đặt hệ thống pin mặt trời chất lượng cao, uy tín và chuyên nghiệp.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Dịch Vụ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-green-400 font-semibold">Hệ thống gia đình</a></li>
+                        <li><a href="services.html" class="text-green-400 font-semibold">Hệ thống doanh nghiệp</a></li>
+                        <li><a href="services.html" class="text-green-400 font-semibold">Bảo trì & sửa chữa</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Tư vấn thiết kế</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Công Ty</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-green-400 transition-colors">Giới thiệu</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-green-400 transition-colors">Dự án</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên Hệ</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone mr-2 text-green-400"></i>090 123 4567</p>
+                        <p><i class="fas fa-envelope mr-2 text-green-400"></i>info@smartpower.vn</p>
+                        <p><i class="fas fa-clock mr-2 text-green-400"></i>8:00 - 18:00 (T2-T7)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Smart Power Viet Nam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

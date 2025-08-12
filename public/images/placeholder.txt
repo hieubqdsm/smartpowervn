@@ -1,0 +1,12 @@
+Thư mục này chứa các hình ảnh cho website SolarTech.
+
+Các hình ảnh cần thiết:
+- hero-solar.jpg (hình ảnh hero section)
+- project-1.jpg đến project-6.jpg (hình ảnh dự án)
+- residential-system.jpg (hệ thống gia đình)
+- commercial-system.jpg (hệ thống doanh nghiệp)
+- company-building.jpg (trụ sở công ty)
+- team-1.jpg đến team-4.jpg (hình ảnh đội ngũ)
+- partner-1.png đến partner-4.png (logo đối tác)
+
+Bạn có thể thay thế các hình ảnh này bằng hình ảnh thực tế của công ty.

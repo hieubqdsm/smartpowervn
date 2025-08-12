@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Trang Không Tìm Thấy | Smart Power Viet Nam</title>
+    <meta name="description" content="Trang bạn đang tìm kiếm không tồn tại. Quay về trang chủ Smart Power Viet Nam để khám phá các dịch vụ lắp đặt hệ thống pin mặt trời.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Smart Power Viet Nam Logo" class="h-12 w-auto mr-3">
+                    <h1 class="text-2xl font-bold text-gray-800">Smart Power Viet Nam</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600 transition-colors">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-600 transition-colors">Giới Thiệu</a>
+                    <a href="services.html" class="text-gray-600 hover:text-green-600 transition-colors">Dịch Vụ</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Dự Án</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-green-600 transition-colors">Liên Hệ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600 transition-colors">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-600 transition-colors">Giới Thiệu</a>
+                    <a href="services.html" class="text-gray-600 hover:text-green-600 transition-colors">Dịch Vụ</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Dự Án</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-green-600 transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 404 Content -->
+    <section class="pt-32 pb-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <!-- 404 Icon -->
+                <div class="mb-8">
+                    <i class="fas fa-solar-panel text-8xl text-green-600 mb-6"></i>
+                    <div class="text-9xl font-bold text-gray-300 mb-4">404</div>
+                </div>
+                
+                <!-- Error Message -->
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Oops! Trang Không Tìm Thấy
+                </h1>
+                
+                <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
+                    Trang bạn đang tìm kiếm có thể đã bị di chuyển, xóa hoặc không tồn tại. 
+                    Hãy kiểm tra lại đường dẫn hoặc quay về trang chủ.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="index.html" class="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Về Trang Chủ
+                    </a>
+                    <a href="contact.html" class="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors">
+                        <i class="fas fa-phone mr-2"></i>Liên Hệ Hỗ Trợ
+                    </a>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Có Thể Bạn Quan Tâm</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <a href="services.html" class="group">
+                            <div class="p-4 border border-gray-200 rounded-lg hover:border-green-600 transition-colors">
+                                <i class="fas fa-home text-2xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Dịch Vụ</h4>
+                                <p class="text-sm text-gray-600">Khám phá các dịch vụ lắp đặt hệ thống pin mặt trời</p>
+                            </div>
+                        </a>
+                        
+                        <a href="projects.html" class="group">
+                            <div class="p-4 border border-gray-200 rounded-lg hover:border-green-600 transition-colors">
+                                <i class="fas fa-project-diagram text-2xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Dự Án</h4>
+                                <p class="text-sm text-gray-600">Xem các dự án đã hoàn thành của chúng tôi</p>
+                            </div>
+                        </a>
+                        
+                        <a href="about.html" class="group">
+                            <div class="p-4 border border-gray-200 rounded-lg hover:border-green-600 transition-colors">
+                                <i class="fas fa-info-circle text-2xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Giới Thiệu</h4>
+                                <p class="text-sm text-gray-600">Tìm hiểu thêm về công ty Smart Power Viet Nam</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/logo.png" alt="Smart Power Viet Nam Logo" class="h-8 w-auto mr-3">
+                        <h3 class="text-xl font-bold">Smart Power Viet Nam</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Chuyên lắp đặt hệ thống pin mặt trời chất lượng cao, uy tín và chuyên nghiệp.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Dịch Vụ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ thống gia đình</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ thống doanh nghiệp</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Bảo trì & sửa chữa</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Tư vấn thiết kế</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Công Ty</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-green-400 transition-colors">Giới thiệu</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-green-400 transition-colors">Dự án</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên Hệ</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone mr-2 text-green-400"></i>090 123 4567</p>
+                        <p><i class="fas fa-envelope mr-2 text-green-400"></i>info@smartpower.vn</p>
+                        <p><i class="fas fa-clock mr-2 text-green-400"></i>8:00 - 18:00 (T2-T7)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Smart Power Viet Nam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
