@@ -356,7 +356,7 @@ document.addEventListener('visibilitychange', function() {
         document.title = 'SolarTech - Quay lại với chúng tôi!';
     } else {
         // Page is visible again
-        document.title = 'SolarTech - Lắp đặt Hệ thống Pin Mặt Trời';
+        document.title = 'SolarTech - Lắp đặt Hệ thống Điện Năng Lượng Mặt Trời';
     }
 });
 

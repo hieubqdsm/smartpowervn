@@ -1,6 +1,6 @@
-# SolarTech - Website Lắp Đặt Hệ Thống Pin Mặt Trời
+# SolarTech - Website Lắp Đặt Hệ Thống Điện Năng Lượng Mặt Trời
 
-Website tĩnh chuyên nghiệp cho công ty lắp đặt hệ thống pin mặt trời, được thiết kế để chạy trên GitLab Pages.
+Website tĩnh chuyên nghiệp cho công ty lắp đặt hệ thống điện năng lượng mặt trời, được thiết kế để chạy trên GitLab Pages.
 
 ## 🌟 Tính Năng
 
