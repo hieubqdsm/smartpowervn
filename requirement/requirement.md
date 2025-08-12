@@ -1,6 +1,6 @@
-Tên Project: Website Lắp đặt Hệ thống Pin Mặt Trời
+Tên Project: Website Lắp đặt Hệ thống Điện Năng Lượng Mặt Trời
 1. Mô tả Tổng quan
-Website là một nền tảng giới thiệu và kinh doanh dịch vụ lắp đặt hệ thống pin mặt trời cho cá nhân và doanh nghiệp. Trang web cần có giao diện hiện đại, dễ sử dụng, cung cấp đầy đủ thông tin về dịch vụ, dự án đã thực hiện, và cho phép khách hàng liên hệ để nhận tư vấn.
+Website là một nền tảng giới thiệu và kinh doanh dịch vụ lắp đặt hệ thống điện năng lượng mặt trời cho cá nhân và doanh nghiệp. Trang web cần có giao diện hiện đại, dễ sử dụng, cung cấp đầy đủ thông tin về dịch vụ, dự án đã thực hiện, và cho phép khách hàng liên hệ để nhận tư vấn.
 
 2. Công nghệ Sử dụng
 Front-end: HTML, CSS (Sử dụng SCSS để dễ quản lý), JavaScript (Sử dụng ES6+).

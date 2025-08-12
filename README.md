@@ -141,4 +141,4 @@ Dự án này được tạo cho mục đích thương mại. Vui lòng liên h�
 
 ---
 
-**SolarTech** - Chuyên lắp đặt hệ thống pin mặt trời chất lượng cao, uy tín và chuyên nghiệp.
+**SolarTech** - Chuyên lắp đặt hệ thống điện năng lượng mặt trời chất lượng cao, uy tín và chuyên nghiệp.
