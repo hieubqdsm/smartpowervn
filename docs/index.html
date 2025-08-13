@@ -8,9 +8,71 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slider-image-container {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slider-image-container.active {
+            display: flex;
+        }
+        .slider-image-container .image-wrapper {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        .slider-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Hoặc 'cover' tùy theo hiệu ứng bạn muốn */
+        }
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .slider-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background-color 0.3s;
+        }
+        .slider-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .slider-caption {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4a5568;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -19,7 +81,6 @@
                     <h1 class="text-2xl font-bold text-gray-800">Smart Power Viet Nam</h1>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-green-600 font-semibold">Trang Chủ</a>
                     <a href="services.html" class="text-gray-600 hover:text-green-600 transition-colors">Dịch Vụ</a>
@@ -27,13 +88,11 @@
                     <a href="contact.html" class="text-gray-600 hover:text-green-600 transition-colors">Liên Hệ</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
 
-            <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="text-green-600 font-semibold">Trang Chủ</a>
@@ -45,7 +104,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section pt-20">
         <div class="container mx-auto px-4 py-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -72,7 +130,6 @@
         </div>
     </section>
 
-    <!-- Services Summary -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -104,7 +161,6 @@
         </div>
     </section>
 
-    <!-- Projects Showcase -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -151,60 +207,212 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <!-- <section class="py-20 bg-white">
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Khách Hàng Nói Gì</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Quy Trình Lắp Đặt Hệ Thống</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Phản hồi từ những khách hàng đã sử dụng dịch vụ của chúng tôi
+                    Chi tiết các bước lắp đặt chuyên nghiệp, đảm bảo an toàn và chất lượng cao nhất
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-gray-50 rounded-lg">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+            <div class="slider-container relative">
+                <div class="slider-wrapper relative overflow-hidden">
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider1.jpg" alt="Lắp dây cứu sinh, lưới chống vật rơi">
+                        </div>
+                        <p class="slider-caption">Lắp dây cứu sinh, lưới chống vật rơi</p>
                     </div>
-                    <p class="text-gray-600 mb-4">"Dịch vụ rất chuyên nghiệp, nhân viên tư vấn nhiệt tình. Hệ thống hoạt động tốt, tiết kiệm được nhiều tiền điện."</p>
-                    <h4 class="font-semibold text-gray-800">Anh Nguyễn Văn A</h4>
-                    <p class="text-sm text-gray-500">Khách hàng cá nhân</p>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider2.jpg" alt="Cẩu bê tông lên mái">
+                        </div>
+                        <p class="slider-caption">Cẩu bê tông lên mái</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider3.jpg" alt="Cẩu bê tông lên mái">
+                        </div>
+                        <p class="slider-caption">Cẩu bê tông lên mái</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider4.jpg" alt="Lắp đặt cục bê tông">
+                        </div>
+                        <p class="slider-caption">Lắp đặt cục bê tông</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider5.jpg" alt="Lắp đặt cục bê tông">
+                        </div>
+                        <p class="slider-caption">Lắp đặt cục bê tông</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider6.jpg" alt="Lắp đặt cục bê tông">
+                        </div>
+                        <p class="slider-caption">Lắp đặt cục bê tông</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider7.jpg" alt="Kiểm tra siết lực khung giá đỡ PV Module">
+                        </div>
+                        <p class="slider-caption">Kiểm tra siết lực khung giá đỡ PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider8.jpg" alt="Kiểm tra siết lực khung giá đỡ PV Module">
+                        </div>
+                        <p class="slider-caption">Kiểm tra siết lực khung giá đỡ PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider9.jpg" alt="Kiểm tra siết lực khung giá đỡ PV Module">
+                        </div>
+                        <p class="slider-caption">Kiểm tra siết lực khung giá đỡ PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider10.jpg" alt="Kiểm tra siết lực khung giá đỡ PV Module">
+                        </div>
+                        <p class="slider-caption">Kiểm tra siết lực khung giá đỡ PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider11.jpg" alt="Kiểm tra độ nghiêng thanh rail">
+                        </div>
+                        <p class="slider-caption">Kiểm tra độ nghiêng thanh rail</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider12.jpg" alt="Kiểm tra độ nghiêng thanh rail">
+                        </div>
+                        <p class="slider-caption">Kiểm tra độ nghiêng thanh rail</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider13.jpg" alt="Kiểm tra lắp đặt rail đúng vị trí">
+                        </div>
+                        <p class="slider-caption">Kiểm tra lắp đặt rail đúng vị trí</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider14.jpg" alt="Kiểm tra lắp đặt rail đúng vị trí">
+                        </div>
+                        <p class="slider-caption">Kiểm tra lắp đặt rail đúng vị trí</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider15.jpg" alt="Kiểm tra lắp đặt rail đúng vị trí">
+                        </div>
+                        <p class="slider-caption">Kiểm tra lắp đặt rail đúng vị trí</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider16.jpg" alt="Lắp đặt PV Module">
+                        </div>
+                        <p class="slider-caption">Lắp đặt PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider17.jpg" alt="Lắp đặt PV Module">
+                        </div>
+                        <p class="slider-caption">Lắp đặt PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider18.jpg" alt="Lắp đặt PV Module">
+                        </div>
+                        <p class="slider-caption">Lắp đặt PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider19.jpg" alt="Lắp đặt PV Module">
+                        </div>
+                        <p class="slider-caption">Lắp đặt PV Module</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider20.jpg" alt="Đo khoảng cách kẹp pin">
+                        </div>
+                        <p class="slider-caption">Đo khoảng cách kẹp pin</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider21.jpg" alt="Lắp thang máng cáp và lối đi vận hành">
+                        </div>
+                        <p class="slider-caption">Lắp thang máng cáp và lối đi vận hành</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider22.jpg" alt="Đi cáp điện">
+                        </div>
+                        <p class="slider-caption">Đi cáp điện</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider23.jpg" alt="Gia công sắt thép">
+                        </div>
+                        <p class="slider-caption">Gia công sắt thép</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider24.jpg" alt="Gia công sắt thép">
+                        </div>
+                        <p class="slider-caption">Gia công sắt thép</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider25.jpg" alt="Kiểm tra trước khi đóng điện">
+                        </div>
+                        <p class="slider-caption">Kiểm tra trước khi đóng điện</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider26.jpg" alt="Kiểm tra trước khi đóng điện">
+                        </div>
+                        <p class="slider-caption">Kiểm tra trước khi đóng điện</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider27.jpg" alt="Khóa an toàn (LOTO Log out Tag out)">
+                        </div>
+                        <p class="slider-caption">Khóa an toàn (LOTO Log out Tag out)</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider28.jpg" alt="Khóa an toàn (LOTO Log out Tag out)">
+                        </div>
+                        <p class="slider-caption">Khóa an toàn (LOTO Log out Tag out)</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider29.jpg" alt="Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn">
+                        </div>
+                        <p class="slider-caption">Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider30.jpg" alt="Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn">
+                        </div>
+                        <p class="slider-caption">Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn</p>
+                    </div>
+                    <div class="slider-image-container">
+                        <div class="image-wrapper">
+                            <img src="images/slider/slider31.jpg" alt="Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn">
+                        </div>
+                        <p class="slider-caption">Scan nhiệt kiểm tra nhiệt độ đảm bảo an toàn</p>
+                    </div>
                 </div>
-                
-                <div class="text-center p-8 bg-gray-50 rounded-lg">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"Công ty lắp đặt nhanh chóng, chất lượng tốt. Chi phí đầu tư ban đầu cao nhưng đã thu hồi vốn sau 3 năm."</p>
-                    <h4 class="font-semibold text-gray-800">Chị Trần Thị B</h4>
-                    <p class="text-sm text-gray-500">Chủ doanh nghiệp</p>
-                </div>
-                
-                <div class="text-center p-8 bg-gray-50 rounded-lg">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"Dịch vụ bảo trì định kỳ rất tốt, nhân viên kỹ thuật có chuyên môn cao. Rất hài lòng với sự lựa chọn."</p>
-                    <h4 class="font-semibold text-gray-800">Ông Lê Văn C</h4>
-                    <p class="text-sm text-gray-500">Giám đốc nhà máy</p>
+                <div class="slider-nav">
+                    <button id="prevBtn">&lt;</button>
+                    <button id="nextBtn">&gt;</button>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- Call to Action -->
     <section class="py-20 bg-green-600">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -224,7 +432,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
@@ -287,5 +494,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+    <script src="js/slider.js"></script> </body>
 </html>
