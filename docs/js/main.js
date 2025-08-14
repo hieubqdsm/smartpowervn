@@ -1,4 +1,4 @@
-// Main JavaScript for SolarTech Website
+// Main JavaScript for Smart Power Website
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
@@ -353,10 +353,10 @@ window.addEventListener('resize', debounce(function() {
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         // Page is hidden, pause any animations or timers
-        document.title = 'SolarTech - Quay lại với chúng tôi!';
+        document.title = 'Smart Power Viet Nam - Quay lại với chúng tôi!';
     } else {
         // Page is visible again
-        document.title = 'SolarTech - Lắp đặt Hệ thống Điện Năng Lượng Mặt Trời';
+        document.title = 'Smart Power Vietnam - Lắp đặt Hệ thống Điện Năng Lượng Mặt Trời';
     }
 });
 
