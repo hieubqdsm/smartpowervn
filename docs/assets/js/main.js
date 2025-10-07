@@ -372,3 +372,49 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+// --- Dropdown Menu Logic ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy tất cả các nút bấm có thuộc tính data-dropdown-toggle
+    const dropdownToggles = document.querySelectorAll('[data-dropdown-toggle]');
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+            const dropdownId = this.getAttribute('data-dropdown-toggle');
+            const dropdownMenu = document.getElementById(dropdownId);
+            
+            // Ẩn tất cả các dropdown khác trước khi hiện dropdown này
+            closeAllDropdowns(dropdownId);
+
+            // Hiện hoặc ẩn dropdown được click
+            if (dropdownMenu) {
+                dropdownMenu.classList.toggle('hidden');
+            }
+        });
+    });
+
+    // Hàm đóng tất cả các dropdown, trừ dropdown đang được tương tác
+    function closeAllDropdowns(exceptId = null) {
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            if (menu.id !== exceptId) {
+                menu.classList.add('hidden');
+            }
+        });
+    }
+
+    // Click ra ngoài để đóng tất cả dropdown
+    window.addEventListener('click', function() {
+        closeAllDropdowns();
+    });
+});
+
+// --- Mobile Menu Toggle ---
+// (Giữ lại code cũ nếu có, ví dụ code mở menu mobile)
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+}

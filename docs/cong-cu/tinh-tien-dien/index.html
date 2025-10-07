@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Tính Tiền Điện Online Chính Xác Theo Biểu Phí EVN</title>
+    <meta name="description" content="Sử dụng công cụ tính tiền điện sinh hoạt online của Smart Power Viet Nam để ước tính hóa đơn hàng tháng một cách nhanh chóng, chính xác theo biểu giá bậc thang mới nhất của EVN.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS cho slider của bạn có thể để ở đây hoặc trong file style.css */
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="/">
+                    <img src="/assets/images/logo.png" alt="Smart Power Viet Nam Logo" class="h-12 w-auto mr-3">
+                </a>
+                <a href="/" class="text-2xl font-bold text-gray-800">Smart Power Viet Nam</a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-green-600">Trang Chủ</a>
+                <a href="/services/" class="text-gray-600 hover:text-green-600">Dịch Vụ</a>
+                <a href="/projects/" class="text-gray-600 hover:text-green-600">Dự Án</a>
+                <a href="/tin-tuc/" class="text-gray-600 hover:text-green-600">Tin Tức</a>
+
+                <div class="relative">
+                    <button data-dropdown-toggle="tools-dropdown-desktop" class="text-green-600 font-semibold">
+                        Công Cụ <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="tools-dropdown-desktop" class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                        <a href="/cong-cu/tinh-tien-dien/" class="block px-4 py-2 text-gray-600 hover:bg-green-50 hover:text-green-600">Tính Tiền Điện</a>
+                        <a href="/cong-cu/tinh-cong-suat/" class="block px-4 py-2 text-gray-600 hover:bg-green-50 hover:text-green-600">Tính Công Suất</a>
+                    </div>
+                </div>
+
+                <a href="/contact/" class="text-gray-600 hover:text-green-600">Liên Hệ</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="/" class="text-gray-600">Trang Chủ</a>
+                <a href="/services/" class="text-gray-600">Dịch Vụ</a>
+                <a href="/projects/" class="text-gray-600">Dự Án</a>
+                <a href="/tin-tuc/" class="text-gray-600">Tin Tức</a>
+                
+                <div>
+                    <button data-dropdown-toggle="tools-dropdown-mobile" class="w-full text-left text-gray-600 font-semibold">
+                        Công Cụ <i class="fas fa-chevron-down text-xs ml-1 float-right mt-1"></i>
+                    </button>
+                    <div id="tools-dropdown-mobile" class="dropdown-menu hidden flex flex-col space-y-2 mt-2 pl-4">
+                         <a href="/cong-cu/tinh-tien-dien/" class="text-gray-600">Tính Tiền Điện</a>
+                         <a href="/cong-cu/tinh-cong-suat/" class="text-gray-600">Tính Công Suất</a>
+                    </div>
+                </div>
+
+                <a href="/contact/" class="text-gray-600">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <div class="pt-20">
+    <section class="py-12 bg-green-600">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Công Cụ Tính Tiền Điện Sinh Hoạt</h1>
+            <p class="text-xl text-green-100 max-w-3xl mx-auto">
+                Ước tính nhanh chóng và chính xác hóa đơn tiền điện hàng tháng của bạn theo biểu giá bán lẻ của EVN.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div id="electricity-calculator" class="bg-gray-50 p-8 rounded-lg shadow-lg border">
+                <div class="grid md:grid-cols-2 gap-6 items-end">
+                    <div>
+                        <label for="kwh-input" class="block text-lg font-semibold text-gray-700 mb-2">Tổng điện năng tiêu thụ (kWh)</label>
+                        <input type="number" id="kwh-input" placeholder="Ví dụ: 850" class="w-full px-4 py-3 text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" />
+                    </div>
+                    <div>
+                        <label for="households-input" class="block text-lg font-semibold text-gray-700 mb-2">Số hộ dùng điện</label>
+                        <input type="number" id="households-input" value="1" min="1" class="w-full px-4 py-3 text-xl border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" />
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="calculate-btn" class="bg-green-600 text-white text-xl px-12 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        <i class="fas fa-calculator mr-2"></i>Tính Toán
+                    </button>
+                </div>
+            </div>
+
+            <div id="calculation-result" class="hidden mt-12">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Kết Quả Chi Tiết</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg border">
+                    <h3 class="text-xl font-semibold mb-4">Diễn giải chi tiết theo từng bậc:</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left font-semibold text-gray-600">Bậc thang</th>
+                                    <th class="px-4 py-2 text-right font-semibold text-gray-600">Đơn giá (đồng/kWh)</th>
+                                    <th class="px-4 py-2 text-right font-semibold text-gray-600">Sản lượng (kWh)</th>
+                                    <th class="px-4 py-2 text-right font-semibold text-gray-600">Thành tiền (đồng)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="result-breakdown">
+                                </tbody>
+                        </table>
+                    </div>
+                    <hr class="my-6" />
+                    <div class="space-y-4 max-w-sm ml-auto text-lg">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tiền điện chưa thuế:</span>
+                            <span id="subtotal-result" class="font-bold text-gray-800">0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Thuế GTGT (8%):</span>
+                            <span id="vat-result" class="font-bold text-gray-800">0</span>
+                        </div>
+                        <div class="flex justify-between text-xl">
+                            <span class="font-semibold text-green-600">Tổng cộng thanh toán:</span>
+                            <span id="total-result" class="font-bold text-green-700">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl prose lg:prose-lg">
+            <h2>Giới thiệu về Công cụ tính tiền điện</h2>
+            <p><strong>Công cụ tính tiền điện</strong> của Smart Power Viet Nam là một tiện ích online miễn phí, giúp bạn dễ dàng ước tính chi phí điện sinh hoạt hàng tháng dựa trên biểu giá điện bậc thang hiện hành của Tập đoàn Điện lực Việt Nam (EVN). Chỉ cần nhập tổng lượng điện tiêu thụ và số hộ sử dụng, công cụ sẽ tự động phân tích chi tiết và đưa ra con số chính xác nhất.</p>
+
+            <h3>Cách tính tiền điện sinh hoạt bậc thang như thế nào?</h3>
+            <p>Giá bán lẻ điện sinh hoạt được EVN áp dụng theo hình thức bậc thang. Điều này có nghĩa là bạn càng sử dụng nhiều điện, giá cho mỗi kWh ở các bậc sau càng cao. Công cụ của chúng tôi áp dụng chính xác công thức này:</p>
+            <ol>
+                <li>Xác định định mức cho mỗi bậc thang dựa trên số hộ đăng ký sử dụng.</li>
+                <li>Phân bổ tổng lượng điện tiêu thụ vào từng bậc theo thứ tự từ thấp đến cao.</li>
+                <li>Nhân sản lượng điện của mỗi bậc với đơn giá tương ứng.</li>
+                <li>Cộng tổng tiền của các bậc để ra chi phí trước thuế.</li>
+                <li>Cộng thêm 8% thuế giá trị gia tăng (VAT) để ra tổng số tiền cuối cùng phải thanh toán.</li>
+            </ol>
+            <p>Việc sử dụng <strong>công cụ tính tiền điện</strong> giúp bạn hiểu rõ hơn về hóa đơn của mình và có kế hoạch sử dụng điện hiệu quả, tiết kiệm hơn.</p>
+            
+            <h3>Làm thế nào để giảm hóa đơn tiền điện?</h3>
+            <p>Bên cạnh việc sử dụng các thiết bị tiết kiệm điện, một giải pháp bền vững và hiệu quả lâu dài là lắp đặt hệ thống điện năng lượng mặt trời. Năng lượng mặt trời giúp bạn tự chủ nguồn điện, giảm sự phụ thuộc vào lưới điện quốc gia và tiết kiệm đáng kể chi phí hàng tháng, đặc biệt là vào những giờ cao điểm. <a href="/services/">Tìm hiểu thêm về các giải pháp của chúng tôi</a>.</p>
+
+        </div>
+    </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Dữ liệu biểu giá điện (Cập nhật khi có thay đổi từ EVN) ---
+    const TARIFF = [
+        { tier: 1, limit: 50, price: 1984 },
+        { tier: 2, limit: 50, price: 2050 },
+        { tier: 3, limit: 100, price: 2380 },
+        { tier: 4, limit: 100, price: 2998 },
+        { tier: 5, limit: 100, price: 3350 },
+        { tier: 6, limit: Infinity, price: 3460 }
+    ];
+    const VAT_RATE = 0.08;
+
+    // --- Lấy các phần tử DOM ---
+    const kwhInput = document.getElementById('kwh-input');
+    const householdsInput = document.getElementById('households-input');
+    const calculateBtn = document.getElementById('calculate-btn');
+    const resultSection = document.getElementById('calculation-result');
+    const resultBreakdown = document.getElementById('result-breakdown');
+    const subtotalResult = document.getElementById('subtotal-result');
+    const vatResult = document.getElementById('vat-result');
+    const totalResult = document.getElementById('total-result');
+
+    // --- Hàm định dạng số ---
+    function formatCurrency(value) {
+        return Math.round(value).toLocaleString('vi-VN') + ' đ';
+    }
+
+    // --- Hàm tính toán ---
+    function calculateBill() {
+        const totalKwh = parseFloat(kwhInput.value);
+        const numHouseholds = parseInt(householdsInput.value, 10);
+
+        if (isNaN(totalKwh) || totalKwh < 0 || isNaN(numHouseholds) || numHouseholds < 1) {
+            alert('Vui lòng nhập số kWh và số hộ hợp lệ!');
+            return;
+        }
+
+        let remainingKwh = totalKwh;
+        let subtotal = 0;
+        resultBreakdown.innerHTML = ''; // Xóa kết quả cũ
+
+        TARIFF.forEach(tierInfo => {
+            if (remainingKwh <= 0) return;
+
+            const tierLimitPerHousehold = tierInfo.limit;
+            const totalTierLimit = tierLimitPerHousehold * numHouseholds;
+            
+            const kwhInThisTier = Math.min(remainingKwh, totalTierLimit);
+            const costInThisTier = kwhInThisTier * tierInfo.price;
+            subtotal += costInThisTier;
+            remainingKwh -= kwhInThisTier;
+
+            // Hiển thị chi tiết từng bậc
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="px-4 py-2 border-b">Bậc ${tierInfo.tier}</td>
+                <td class="px-4 py-2 border-b text-right">${tierInfo.price.toLocaleString('vi-VN')}</td>
+                <td class="px-4 py-2 border-b text-right">${kwhInThisTier.toLocaleString('vi-VN')}</td>
+                <td class="px-4 py-2 border-b text-right font-semibold">${Math.round(costInThisTier).toLocaleString('vi-VN')}</td>
+            `;
+            resultBreakdown.appendChild(row);
+        });
+        
+        const vat = subtotal * VAT_RATE;
+        const total = subtotal + vat;
+
+        // Hiển thị kết quả tổng
+        subtotalResult.textContent = formatCurrency(subtotal);
+        vatResult.textContent = formatCurrency(vat);
+        totalResult.textContent = formatCurrency(total);
+
+        resultSection.classList.remove('hidden');
+        resultSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    calculateBtn.addEventListener('click', calculateBill);
+    kwhInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            calculateBill();
+        }
+    });
+});
+</script>
+
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="/assets/images/logo.png" alt="Smart Power Viet Nam Logo" class="h-8 w-auto mr-3">
+                    <h3 class="text-xl font-bold">Smart Power Viet Nam</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    Chuyên lắp đặt hệ thống điện năng lượng mặt trời chất lượng cao, uy tín và chuyên nghiệp.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Dịch Vụ</h4>
+                <ul class="space-y-2">
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ
+                            thống gia đình</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ
+                            thống doanh nghiệp</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Bảo trì
+                            & sửa chữa</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Tư vấn
+                            thiết kế</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Công Ty</h4>
+                <ul class="space-y-2">
+
+                    <li><a href="projects.html" class="text-gray-300 hover:text-green-400 transition-colors">Dự
+                            án</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors">Liên
+                            hệ</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Liên Hệ</h4>
+                <div class="space-y-2 text-gray-300">
+                    <p><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>171/8B Tôn Đản, Phường Khánh Hội,
+                        Thành Phố Hồ Chí Minh
+                        <br /> Chi nhánh miền Trung: 32 Trần Nam Trung, Phường Cẩm Thành, Tỉnh Quảng Ngãi
+                        <br /> Chi nhánh miền Tây: 81 Lê Văn Tám, Phường Long Châu, Tỉnh Vĩnh Long
+                    </p>
+                    <p><i class="fas fa-phone mr-2 text-green-400"></i>0707 153 802</p>
+                    <p><i class="fas fa-envelope mr-2 text-green-400"></i>info@smartpowervn.com</p>
+                    <p><i class="fas fa-clock mr-2 text-green-400"></i>8:00 - 18:00 (T2-T7)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+            <p>&copy; 2025 Smart Power Viet Nam. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/slider.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RLZQDNQ1Y"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2RLZQDNQ1Y');
+</script>
+</body>
+
+</html>

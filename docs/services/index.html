@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ</title>
+    <meta name="description" content="Dịch vụ lắp đặt hệ thống điện năng lượng mặt trời chuyên nghiệp cho gia đình và doanh nghiệp. Tư vấn, thiết kế, lắp đặt và bảo trì.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS cho slider của bạn có thể để ở đây hoặc trong file style.css */
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="/">
+                    <img src="/assets/images/logo.png" alt="Smart Power Viet Nam Logo" class="h-12 w-auto mr-3">
+                </a>
+                <a href="/" class="text-2xl font-bold text-gray-800">Smart Power Viet Nam</a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-green-600">Trang Chủ</a>
+                <a href="/services/" class="text-green-600 font-semibold">Dịch Vụ</a>
+                <a href="/projects/" class="text-gray-600 hover:text-green-600">Dự Án</a>
+                <a href="/tin-tuc/" class="text-gray-600 hover:text-green-600">Tin Tức</a>
+
+                <div class="relative">
+                    <button data-dropdown-toggle="tools-dropdown-desktop" class="text-gray-600 hover:text-green-600">
+                        Công Cụ <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="tools-dropdown-desktop" class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                        <a href="/cong-cu/tinh-tien-dien/" class="block px-4 py-2 text-gray-600 hover:bg-green-50 hover:text-green-600">Tính Tiền Điện</a>
+                        <a href="/cong-cu/tinh-cong-suat/" class="block px-4 py-2 text-gray-600 hover:bg-green-50 hover:text-green-600">Tính Công Suất</a>
+                    </div>
+                </div>
+
+                <a href="/contact/" class="text-gray-600 hover:text-green-600">Liên Hệ</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="/" class="text-gray-600">Trang Chủ</a>
+                <a href="/services/" class="text-green-600 font-semibold">Dịch Vụ</a>
+                <a href="/projects/" class="text-gray-600">Dự Án</a>
+                <a href="/tin-tuc/" class="text-gray-600">Tin Tức</a>
+                
+                <div>
+                    <button data-dropdown-toggle="tools-dropdown-mobile" class="w-full text-left text-gray-600 font-semibold">
+                        Công Cụ <i class="fas fa-chevron-down text-xs ml-1 float-right mt-1"></i>
+                    </button>
+                    <div id="tools-dropdown-mobile" class="dropdown-menu hidden flex flex-col space-y-2 mt-2 pl-4">
+                         <a href="/cong-cu/tinh-tien-dien/" class="text-gray-600">Tính Tiền Điện</a>
+                         <a href="/cong-cu/tinh-cong-suat/" class="text-gray-600">Tính Công Suất</a>
+                    </div>
+                </div>
+
+                <a href="/contact/" class="text-gray-600">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <section class="pt-20 pb-12 bg-green-600">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Dịch Vụ Của Chúng Tôi</h1>
+        <p class="text-xl text-green-100 max-w-3xl mx-auto">
+            Giải pháp toàn diện cho hệ thống năng lượng mặt trời từ tư vấn, thiết kế đến lắp đặt và bảo trì
+        </p>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dịch Vụ Chính</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-center mb-6">
+                    <i class="fas fa-home text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Hộ Gia Đình</h3>
+                </div>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Công suất từ 3kWp - 10kWp</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Tiết kiệm 60-80% chi phí điện</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Bảo hành 25-30 năm cho tấm pin</span></li>
+                </ul>
+                <div class="mt-6 text-center">
+                    <a href="#residential" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-center mb-6">
+                    <i class="fas fa-building text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Doanh Nghiệp</h3>
+                </div>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Công suất từ 20kWp - 1MWp</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Giảm chi phí vận hành đáng kể</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Hỗ trợ thủ tục kết nối với EVN</span></li>
+                </ul>
+                <div class="mt-6 text-center">
+                    <a href="#commercial" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-center mb-6">
+                    <i class="fas fa-tools text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Bảo Trì &amp; Sửa Chữa</h3>
+                </div>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Bảo trì định kỳ hàng năm</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Sửa chữa nhanh chóng, 24/7</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-3"></i><span>Đồng hành trọn vòng đời dự án</span></li>
+                </ul>
+                <div class="mt-6 text-center">
+                    <a href="#maintenance" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Tìm hiểu thêm <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="residential" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Hệ Thống Cho Gia Đình</h2>
+                <p class="text-lg text-gray-600 mb-6">Giải pháp năng lượng mặt trời tối ưu cho hộ gia đình, giúp tiết kiệm chi phí điện năng và góp phần bảo vệ môi trường.</p>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div><span class="text-gray-600">Công suất:</span> <span class="font-semibold">3-10 kWp</span></div>
+                        <div><span class="text-gray-600">Điện năng tạo ra:</span> <span class="font-semibold">12-40 kWh/ngày</span></div>
+                        <div><span class="text-gray-600">Tiết kiệm:</span> <span class="font-semibold">60-90%</span></div>
+                        <div><span class="text-gray-600">Thu hồi vốn:</span> <span class="font-semibold">2-3 năm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="/assets/images/residential-system.jpg" alt="Hệ thống gia đình" class="rounded-lg shadow-2xl max-w-full h-auto" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="commercial" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:order-2">
+                <img src="/assets/images/commercial-system.jpg" alt="Hệ thống doanh nghiệp" class="rounded-lg shadow-2xl max-w-full h-auto" />
+            </div>
+            <div class="md:order-1">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Hệ Thống Cho Doanh Nghiệp</h2>
+                <p class="text-lg text-gray-600 mb-6">Giải pháp năng lượng mặt trời quy mô lớn cho doanh nghiệp, nhà máy, văn phòng giúp giảm chi phí vận hành và tăng tính cạnh tranh.</p>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div><span class="text-gray-600">Giảm chi phí:</span> <span class="font-semibold">50-80%</span></div>
+                        <div><span class="text-gray-600">Thu hồi vốn:</span> <span class="font-semibold">3-4 năm</span></div>
+                        <div><span class="text-gray-600">Bảo hành:</span> <span class="font-semibold">25 năm</span></div>
+                        <div><span class="text-gray-600">Tuổi thọ:</span> <span class="font-semibold">30+ năm</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="maintenance" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dịch Vụ Bảo Trì &amp; Sửa Chữa</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Đảm bảo hệ thống hoạt động hiệu quả và bền vững với dịch vụ bảo trì chuyên nghiệp.</p>
+        </div>
+        </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bảng Giá Tham Khảo</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Giá cả minh bạch, cạnh tranh với nhiều gói dịch vụ phù hợp với mọi nhu cầu.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-lg border-2 border-gray-200 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Gói Cơ Bản</h3>
+                <div class="text-4xl font-bold text-green-600 mb-2">3kWp</div>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i><span>5 tấm pin 615Wp</span></li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i><span>Inverter 3kW</span></li>
+                </ul>
+                <a href="/contact/" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">Tư Vấn Ngay</a>
+            </div>
+            <div class="bg-green-600 p-8 rounded-lg border-2 border-green-600 text-white relative text-center">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><span class="bg-yellow-400 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">Phổ Biến</span></div>
+                <h3 class="text-2xl font-bold mb-2">Gói Tiêu Chuẩn</h3>
+                <div class="text-4xl font-bold mb-2">5kWp</div>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-center"><i class="fas fa-check mr-3"></i><span>8 tấm pin 620Wp</span></li>
+                    <li class="flex items-center"><i class="fas fa-check mr-3"></i><span>Inverter 5kW</span></li>
+                </ul>
+                <a href="/contact/" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Tư Vấn Ngay</a>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg border-2 border-gray-200 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Gói Cao Cấp</h3>
+                <div class="text-4xl font-bold text-green-600 mb-2">10kWp</div>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i><span>16 tấm pin 620Wp</span></li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i><span>Inverter 10kW</span></li>
+                </ul>
+                <a href="/contact/" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">Tư Vấn Ngay</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-green-600">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sẵn Sàng Lắp Đặt Hệ Thống Điện Năng Lượng Mặt Trời?</h2>
+        <a href="/contact/" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Tư Vấn Miễn Phí</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="/assets/images/logo.png" alt="Smart Power Viet Nam Logo" class="h-8 w-auto mr-3">
+                    <h3 class="text-xl font-bold">Smart Power Viet Nam</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    Chuyên lắp đặt hệ thống điện năng lượng mặt trời chất lượng cao, uy tín và chuyên nghiệp.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Dịch Vụ</h4>
+                <ul class="space-y-2">
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ
+                            thống gia đình</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Hệ
+                            thống doanh nghiệp</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Bảo trì
+                            & sửa chữa</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-green-400 transition-colors">Tư vấn
+                            thiết kế</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Công Ty</h4>
+                <ul class="space-y-2">
+
+                    <li><a href="projects.html" class="text-gray-300 hover:text-green-400 transition-colors">Dự
+                            án</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors">Liên
+                            hệ</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Liên Hệ</h4>
+                <div class="space-y-2 text-gray-300">
+                    <p><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>171/8B Tôn Đản, Phường Khánh Hội,
+                        Thành Phố Hồ Chí Minh
+                        <br /> Chi nhánh miền Trung: 32 Trần Nam Trung, Phường Cẩm Thành, Tỉnh Quảng Ngãi
+                        <br /> Chi nhánh miền Tây: 81 Lê Văn Tám, Phường Long Châu, Tỉnh Vĩnh Long
+                    </p>
+                    <p><i class="fas fa-phone mr-2 text-green-400"></i>0707 153 802</p>
+                    <p><i class="fas fa-envelope mr-2 text-green-400"></i>info@smartpowervn.com</p>
+                    <p><i class="fas fa-clock mr-2 text-green-400"></i>8:00 - 18:00 (T2-T7)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+            <p>&copy; 2025 Smart Power Viet Nam. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/slider.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RLZQDNQ1Y"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2RLZQDNQ1Y');
+</script>
+</body>
+
+</html>
